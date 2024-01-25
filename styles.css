@@ -5,85 +5,159 @@
     box-sizing: border-box;
 }
 
-body, html {
-    font-family: 'Arial', sans-serif;
-    background-color: #121212;
-    color: #fff;
+/* Body Styling */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
     line-height: 1.6;
-    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
 }
 
-/* Links */
-a {
-    color: #0d6efd;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #0a58ca;
-}
-
-/* Section Styling */
-.section {
+/* Header Styling */
+.header {
+    background-image: url('background.png'); /* Update with your actual image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 350px;
     width: 100%;
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    transition: opacity 1s ease-in-out;
-    opacity: 0;
 }
 
-.content {
-    max-width: 800px;
-    text-align: center;
-}
-
-/* Headings */
-h1, h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-/* Button Styling */
-button {
-    background-color: #0d6efd;
+/* Header Title */
+h1 {
     color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-button:hover {
-    background-color: #0a58ca;
+/* Main Container */
+#main-container {
+    width: 100%;
+}
+
+/* Content Layout */
+.main-content {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Sidebar and Content Styling */
+.sidebar, .content {
+    background-color: #262626;
+    padding: 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Content Flexibility */
+.content {
+    flex: 2;
+}
+
+/* Sidebar Flexibility */
+.sidebar {
+    flex: 1;
 }
 
 /* List Styling */
 ul {
-    list-style: none;
-    padding: 0;
+    list-style-type: none;
 }
 
-ul li {
+li {
+    background-color: #333;
     margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #444;
+    border-radius: 5px;
 }
+
+/* Link Styling */
+a {
+    text-decoration: none;
+    color: #4da6ff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Welcome Box */
+.welcome-box {
+    background-color: #333;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #fff;
+}
+
+/* Back Button */
+.back-button {
+    display: block;
+    background-color: #4da6ff;
+    color: white;
+    padding: 10px 15px;
+    margin: 10px 0;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #3991cc;
+}
+
+/* How to Use Section */
+.how-to-use {
+    color: #e0e0e0;
+    background-color: #2a2a2a;
+    border-left: 3px solid #4da6ff;
+    padding: 15px;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.how-to-use h3 {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.how-to-use ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    margin-left: 20px;
+}
+
+.how-to-use li {
+    margin-bottom: 5px;
+}
+
+/* Additional Styles */
+/* Include any other styles from your provided code or custom styles here */
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    h1, h2 {
-        font-size: 2rem;
+    .main-content {
+        flex-direction: column;
     }
 
-    .content {
-        padding: 10px;
+    .sidebar, .content {
+        margin: 0;
+        margin-bottom: 10px;
     }
 
-    button {
-        padding: 8px 15px;
-        font-size: 0.9rem;
+    h1 {
+        font-size: 2.5em;
     }
 }
