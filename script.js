@@ -5,18 +5,25 @@ document.addEventListener("DOMContentLoaded", function() {
         sections.forEach(section => fadeInSection(section));
     });
 
-    // Initial fade-in for the first section
+    // Initial fade-in for the first section, if present
     fadeInSection(document.querySelector(".section"));
+
+    // Fetch problem sets if on problem_sets.html
+    if (window.location.pathname.endsWith('problem_sets.html')) {
+        fetchProblemSets();
+    }
 });
 
 function fadeInSection(section) {
-    let sectionTop = section.getBoundingClientRect().top;
-    let sectionBottom = section.getBoundingClientRect().bottom;
+    if (section) {
+        let sectionTop = section.getBoundingClientRect().top;
+        let sectionBottom = section.getBoundingClientRect().bottom;
 
-    if (sectionTop < window.innerHeight && sectionBottom > 0) {
-        section.style.opacity = 1;
-    } else {
-        section.style.opacity = 0;
+        if (sectionTop < window.innerHeight && sectionBottom > 0) {
+            section.style.opacity = 1;
+        } else {
+            section.style.opacity = 0;
+        }
     }
 }
 
@@ -47,12 +54,25 @@ function fetchProblemSets() {
         .catch(error => console.error('Error fetching problem sets:', error));
 }
 
-// Call fetchProblemSets if on problem_sets.html
-if (window.location.pathname.endsWith('problem_sets.html')) {
-    fetchProblemSets();
+// Search for files
+function searchFile() {
+    let input = document.getElementById('searchInput');
+    let filter = input.value.toUpperCase();
+    let ul = document.getElementById('file-list');
+    let li = ul.getElementsByTagName('li');
+
+    for (let i = 0; i < li.length; i++) {
+        let a = li[i].getElementsByTagName('a')[0];
+        let txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
 }
 
-// Function to load a specific problem based on URL parameters (for problem_template.html)
+// Load a specific problem based on URL parameters (for problem_template.html)
 function loadProblemContent() {
     const urlParams = new URLSearchParams(window.location.search);
     const problemName = urlParams.get('problem');
@@ -74,7 +94,7 @@ function loadProblemContent() {
     }
 }
 
-// Call loadProblemContent if on problem_template.html
+// Load problem content if on problem_template.html
 if (window.location.pathname.endsWith('problem_template.html')) {
     loadProblemContent();
 }
