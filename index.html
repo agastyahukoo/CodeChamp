@@ -3,30 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeChamp</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>CodeChamp - Competitive Programming</title>
+    <style>
+        /* Reset some default styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #111;
+            color: #fff;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #222;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        p {
+            font-size: 18px;
+            color: #bbb;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #333;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        /* Main Content Styles */
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #222;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <!-- Home Section -->
-    <div class="section" id="home">
-        <div class="content">
-            <h1>Welcome to CodeChamp</h1>
-            <p>Challenge Your Coding Skills</p>
-            <button>Get Started</button>
-        </div>
+    <header>
+        <h1>Welcome to CodeChamp</h1>
+        <p>Your go-to resource for competitive programming challenges and solutions.</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="problem_sets.html">Problem Sets</a></li>
+            <li><a href="#">Tutorials</a></li>
+            <li><a href="#">Contests</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h2>About Us</h2>
+        <p>CodeChamp is dedicated to helping programmers improve their skills through challenging problem sets and comprehensive tutorials.</p>
+        <p>Our mission is to create a platform where programmers can enhance their problem-solving abilities and excel in competitive programming competitions.</p>
     </div>
 
-    <!-- Problem Sets Section -->
-    <div class="section" id="problem-sets">
-        <div class="content">
-            <h2>Problem Sets</h2>
-            <p>Explore a variety of challenges to test your skills.</p>
-            <ul id="file-list">
-                <!-- Problem sets will be listed here by the JavaScript -->
-            </ul>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2024 CodeChamp - Competitive Programming</p>
+    </footer>
 </body>
 </html>
