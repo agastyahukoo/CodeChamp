@@ -10,31 +10,34 @@
             margin: 0;
             padding: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #111;
+            background-color: #1d1d1d;
             color: #fff;
         }
 
         /* Header Styles */
         header {
-            background-color: #222;
-            padding: 20px;
+            background-color: #333;
+            padding: 20px 0;
             text-align: center;
         }
 
         h1 {
-            font-size: 36px;
+            font-size: 42px;
             margin: 0;
+            color: #fff;
         }
 
         p {
             font-size: 18px;
             color: #bbb;
+            line-height: 1.6;
         }
 
         /* Navigation Styles */
         nav {
-            background-color: #333;
+            background-color: #222;
             text-align: center;
+            padding: 15px 0;
         }
 
         ul {
@@ -50,31 +53,39 @@
         a {
             text-decoration: none;
             color: #fff;
-            font-size: 16px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #6ab04c;
         }
 
         /* Main Content Styles */
         .container {
-            padding: 20px;
+            padding: 30px 0;
             max-width: 800px;
             margin: 0 auto;
         }
 
         /* Footer Styles */
         footer {
-            background-color: #222;
+            background-color: #333;
             text-align: center;
-            padding: 10px;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
+            padding: 15px 0;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: #bbb;
+            margin: 0;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Welcome to CodeChamp</h1>
-        <p>Your go-to resource for competitive programming challenges and solutions.</p>
+        <p>Your premier destination for mastering competitive programming.</p>
     </header>
     
     <nav>
@@ -88,9 +99,9 @@
     </nav>
 
     <div class="container">
-        <h2>About Us</h2>
-        <p>CodeChamp is dedicated to helping programmers improve their skills through challenging problem sets and comprehensive tutorials.</p>
-        <p>Our mission is to create a platform where programmers can enhance their problem-solving abilities and excel in competitive programming competitions.</p>
+        <h2>About CodeChamp</h2>
+        <p>CodeChamp is committed to advancing your programming skills through challenging problem sets and in-depth tutorials.</p>
+        <p>Our goal is to provide a platform where you can refine your problem-solving abilities and excel in competitive programming competitions.</p>
     </div>
 
     <footer>
